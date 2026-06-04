@@ -81,13 +81,11 @@ class RegisterSerializer(serializers.ModelSerializer):
             )
 
         if role == User.Role.STUDENT:
-            # Clear company-specific fields
-            attrs.setdefault("company_name", "")
-            attrs.setdefault("company_website", "")
+            attrs["company_name"] = ""
+            attrs["company_website"] = ""
 
         if role == User.Role.COMPANY:
-            # Clear student-specific fields
-            attrs.setdefault("university", "")
+            attrs["university"] = ""
             attrs.pop("graduation_year", None)
 
         return attrs
