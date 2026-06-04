@@ -1,8 +1,13 @@
+"""
+URL patterns for the applications app.
+Mounted at: /api/applications/
+"""
 from django.urls import path
-# from .views import ApplyInternshipAPIView
-# from .views import ApplicationListAPIView
+
+from .views import ApplicationListCreateView
+
+app_name = "applications"
 
 urlpatterns = [
-#     path("", ApplyInternshipAPIView.as_view()),
-#     path("list/", ApplicationListAPIView.as_view()),
+    path("", ApplicationListCreateView.as_view(), name="list-create"),
 ]
