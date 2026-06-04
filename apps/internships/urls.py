@@ -1,8 +1,14 @@
+"""
+URL patterns for the internships app.
+Mounted at: /api/internships/
+"""
 from django.urls import path
-# from .views import InternshipListCreateAPIView
-# from .views import InternshipRetrieveUpdateDestroyAPIView
+
+from .views import InternshipDetailView, InternshipListCreateView
+
+app_name = "internships"
 
 urlpatterns = [
-#     path("", InternshipListCreateAPIView.as_view()),
-#     path("<int:pk>/", InternshipRetrieveUpdateDestroyAPIView.as_view()),
+    path("", InternshipListCreateView.as_view(), name="list-create"),
+    path("<int:pk>/", InternshipDetailView.as_view(), name="detail"),
 ]
