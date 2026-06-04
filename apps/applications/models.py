@@ -73,7 +73,7 @@ class Application(models.Model):
             models.Index(fields=["user", "status"], name="idx_application_user_status"),
             models.Index(
                 fields=["internship", "status"],
-                name="idx_application_internship_status",
+                name="idx_app_internship_status",
             ),
         ]
 
