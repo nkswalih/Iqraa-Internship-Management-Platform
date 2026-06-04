@@ -1,0 +1,47 @@
+# ==========================================
+# Python Core & Byte-code
+# ==========================================
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+
+# ==========================================
+# Django Framework Specifics
+# ==========================================
+*.log
+local_settings.py
+db.sqlite3
+db.sqlite3-journal
+
+# Media and Static directories (uncomment if you host media locally)
+# media/
+# static/
+
+# ==========================================
+# Virtual Environments (Python venv/pipenv)
+# ==========================================
+.venv/
+venv/
+ENV/
+env/
+instance/
+.pytest_cache/
+.tox/
+.coverage
+htmlcov/
+
+# ==========================================
+# Security & Environment Variables
+# ==========================================
+.env
+.secrets
+*.env
+
+# ==========================================
+# OS and Common IDEs (VS Code / PyCharm)
+# ==========================================
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
