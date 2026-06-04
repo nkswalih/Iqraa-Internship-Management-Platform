@@ -1,7 +1,6 @@
 from .base import *
-from decouple import config
 
-DEBUG = False
+DEBUG = env.bool("DEBUG", default=False)
 
 ALLOWED_HOSTS = [
     "igraainternship.com",
